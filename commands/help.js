@@ -19,6 +19,7 @@ module.exports = {
             {name: '=twitch', value: 'Link del canale Twich di im_red_fox'},
             {name: '=telegram', value: 'Link del gruppo telegram di im_red_fox'},
             {name: '=instagram', value: 'Link del profilo instagram di im_red_fox'},
+            {name: '=avatar', value: 'Mosta l\'avatar di un utente'},
             
         )
         .setImage('https://cdn.discordapp.com/attachments/787356318100619275/884118075987853422/Immagine_2021-09-04_144035.png')
