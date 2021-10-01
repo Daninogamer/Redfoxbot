@@ -81,6 +81,7 @@ const status = [
 
     //Messaggio eliminato
     client.on('messageDelete', message => {
+        if (message.author.bot) return;
         snipes.set(message.channel.id, message)
 
         const LogChannel = client.channels.cache.get('884726534928203796')
@@ -95,6 +96,7 @@ const status = [
     })
     //messaggio modificato
     client.on('messageUpdate', async(oldMessage, newMessage) => {
+        if (message.author.bot) return;
         const LogChannel = client.channels.cache.get('884726534928203796')
         const EditedLog = new Discord.MessageEmbed()
         .setTitle("**Messaggio modificato**")
