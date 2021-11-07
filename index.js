@@ -37,16 +37,16 @@ const status = [
         index++;
     }, 7500)
 
-    const snipes = new Discord.Collection()
+   // const snipes = new Discord.Collection()
     // Member Count
-    client.on("guildMemberAdd", member => {
-        var canale = client.channels.cache.get("885286791886819388")
-        canale.setName("👥Tutti insieme: " + member.guild.memberCount) //Impostare il nome del canale
-    });
-    client.on("guildMemberRemove", member => {
-        var canale = client.channels.cache.get("885286791886819388")
-        canale.setName("👥Tutti insieme: " + member.guild.memberCount) //Impostare il nome del canale
-    });
+   // client.on("guildMemberAdd", member => {
+       // var canale = client.channels.cache.get("885286791886819388")
+      //  canale.setName("👥Tutti insieme: " + member.guild.memberCount) //Impostare il nome del canale
+   // });
+   // client.on("guildMemberRemove", member => {
+    //    var canale = client.channels.cache.get("885286791886819388")
+       // canale.setName("👥Tutti insieme: " + member.guild.memberCount) //Impostare il nome del canale
+  //  });
 
 
     
@@ -79,36 +79,6 @@ const status = [
     }
 })
 
-    //Messaggio eliminato
-    client.on('messageDelete', message => {
-        if (message.author.bot) return;
-        snipes.set(message.channel.id, message)
-
-        const LogChannel = client.channels.cache.get('884726534928203796')
-        const DeletedLog = new Discord.MessageEmbed()
-        .setTitle("**Messaggio cancellato**")
-        .addField('**Eliminato da**',  `${message.author} - (${message.author.id})`)
-        .addField("**In**", message.channel)
-        .addField('**Contenuto del messaggio**', message.content)
-        .setColor('PURPLE')
-        .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
-        LogChannel.send(DeletedLog)
-    })
-    //messaggio modificato
-    client.on('messageUpdate', async(oldMessage, newMessage) => {
-        if (message.author.bot) return;
-        const LogChannel = client.channels.cache.get('884726534928203796')
-        const EditedLog = new Discord.MessageEmbed()
-        .setTitle("**Messaggio modificato**")
-        .addField('**Modificato da**',  `${oldMessage.author} - (${oldMessage.author.id})`)
-        .addField("**In**", oldMessage.channel)
-        .addField('**Vecchio messaggio**', oldMessage.content)
-        .addField('**Nuovo messaggio**', newMessage.content)
-        .setColor('PURPLE')
-        .setThumbnail(oldMessage.author.displayAvatarURL({dynamic: true}))
-        await LogChannel.send(EditedLog)
-    })
-
 
 
 client.on('message', message => {
@@ -125,7 +95,7 @@ client.on('message', message => {
 
     client.on('guildMemberAdd', member => {
         //Autoruolo
-    const ruolo = member.guild.roles.cache.find(r => r.name === '🦊 Iscritto');
+    const ruolo = member.guild.roles.cache.find(r => r.name === '🦊 ᴠᴏʟᴘɪɴᴀ');
     member.roles.add(ruolo);
 
     const ruolo1 = member.guild.roles.cache.find(r => r.name === '▬▬▬▬▬▬ Ruoli ▬▬▬▬▬▬');
