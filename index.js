@@ -3,7 +3,9 @@ const config = require('./config.json')
 const client = new Discord.Client()
 
 
-client.login(process.env.token);
+client.config = require("./config.json");
+
+client.login(client.config.token);
 
 
 client.on("message", (message) => {

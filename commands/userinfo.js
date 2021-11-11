@@ -30,7 +30,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setTitle(`informazioni sull'utente: ${member.user.username}`)
             .setDescription(`Stato: ${member.user.presence.status} (${member.user.presence.game || 'Non Sta giocando'})`, true)  
-            .setColor('RED')
+            .setColor('RANDOM')
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
             .addField('Informazioni', `Nome: ${member.user.username} \nTag: ${member.user.discriminator}`)
             .addField('Date', `Account creato: ${moment(member.user.createdTimestamp).format('DD/MM/YYYY')} \nIngresso Server: ${moment(member.joinedAt).format('DD/MM/YYYY')}`, true)

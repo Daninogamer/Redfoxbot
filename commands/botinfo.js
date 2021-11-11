@@ -13,7 +13,7 @@ module.exports = {
         const embedInfo = new Discord.MessageEmbed()
             .setTitle('Informazioni sul Bot')
             .setDescription(`Tag del bot **${client.user.tag}**`)
-            .setColor('YELLOW')
+            .setColor('RANDOM')
             .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
             .addField('Server', numeroServer, true)
             .addField('Canali', numeroCanali, true)
