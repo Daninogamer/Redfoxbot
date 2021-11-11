@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
+require('dotenv'),config();
 const config = require('./config.json')
 const client = new Discord.Client()
 
 
-client.config = require("./config.json");
-
-client.login(client.config.token);
+client.login(process.env.token);
 
 
 client.on("message", (message) => {
